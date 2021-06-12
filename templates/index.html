@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask web app</title>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1>Yaswanth Janardhan Konduru</h1>
+            <h1>1001741845</h1>
+        </div>
+        <div style="width:100%">
+            <div style="width:50%; float: left;">
+                <form action="" method=POST enctype=multipart/form-data style="width:500px; float:right; margin-right: 20px;">
+                    <fieldset>
+                        <legend>CSV & Images upload</legend><br>
+                        <label for="filesupload">Select files for upload</label>
+                        <input style="margin-left: 50px;" type="file" name="file" id="filesupload" multiple><br><br>
+                        <a href="/upload"><input type="button" value="Upload"></a>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div style="margin-left: 50%;">
+                <form action="" method=POST enctype=multipart/form-data style="width:500px;">
+                    <fieldset>
+                        <legend>Display Pictures</legend><br>
+                        <label for="displaypicture">Click to view pictures of people with salary less than 99000</label><br><br>
+                        <a href="/disppic"><input style="margin-left: 20px;" type="button" id="displaypicture" value="View"></a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div style="width:100%">
+            <div style="width:50%; float: left;">
+                <form action="" method=POST enctype=multipart/form-data style="width:500px; float:right; margin-right: 20px;">
+                    <fieldset>
+                        <legend>Add Picture</legend><br>
+                        <label for="addpicture">Select an image for Dave</label>
+                        <input style="margin-left: 20px;" type="file" name="file" id="addpicture"><br><br>
+                        <a href="/upload"><input type="button" value="Upload"></a>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div style="margin-left: 50%;">
+                <form action="{{ url_for("delete_people")}}" method=POST enctype=multipart/form-data style="width:500px; margin-top:5%">
+                    <fieldset>
+                        <legend>Delete</legend><br>
+                        <label for="deleteperson">Enter a name to delete</label>
+                        <input style="margin-left: 20px;" type="text" name="deleteperson" id="deleteperson"><br><br>
+                        <a href="/deletepeople"><input style="margin-left: 20px;" type="submit" value="Delete"></a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div style="width:100%">
+            <div style="width:50%; float: left;">
+                <form action="{{ url_for("key_update")}}" method=POST enctype=multipart/form-data style="width:500px; float:right; margin-right: 20px;">
+                    <fieldset>
+                        <legend>Change Dhruvi's Keywords</legend><br>
+                        <label for="keywordchange">Enter text to update Dhruvi's keywords</label>
+                        <input style="margin-left: 20px;" type="text" name="keywordchange" id="keywordchange"><br><br>
+                        <a href="/keyupdate"><input type="submit" value="Update"></a>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div style="margin-left: 50%;">
+                <form action="{{ url_for("salary_update")}}" method=POST enctype=multipart/form-data style="width:500px; margin-top:5%">
+                    <fieldset>
+                        <legend>Update Salary</legend><br>
+                        <label for="salaryname">Enter Name</label>
+                        <input style="margin-left: 20px;" type="text" name="salaryname" id="salaryname"><br><br>
+                        <label for="salary">New Salary</label>
+                        <input style="margin-left: 20px;" type="text" name="salary" id="salary"><br><br>
+                        <a href="/salaryupdate"><input type="submit" value="Update"></a>
+                    </fieldset>
+                </form>
+            </div>
+            <div style="margin-left: 50%;">
+                <form action="{{ url_for("display_pic")}}" method=POST enctype=multipart/form-data style="width:500px; margin-top:5%">
+                    <fieldset>
+                        <legend>Get Image</legend><br>
+                        <label for="names">Enter Name</label>
+                        <input style="margin-left: 20px;" type="text" name="names" id="names"><br><br>
+                        <a href="/salaryupdate"><input type="submit" value="Get Image"></a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

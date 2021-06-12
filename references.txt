@@ -1,0 +1,13 @@
+https://docs.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=powershell&pivots=python-framework-flask
+
+https://github.com/Azure/azure-sdk-for-python/blob/master/sdk/storage/azure-storage-file-share/README.md
+
+https://www.youtube.com/watch?v=enhJfb_6KYU
+
+https://www.quickprogrammingtips.com/azure/how-to-upload-files-to-azure-storage-blobs-using-python.html
+
+https://docs.microsoft.com/en-us/azure/azure-sql/database/connect-query-portal
+
+https://stackoverflow.com/questions/46045834/pyodbc-data-source-name-not-found-and-no-default-driver-specified
+
+https://stackoverflow.com/questions/41978833/upload-csv-file-into-microsoft-azure-storage-account-using-python
